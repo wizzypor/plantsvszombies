@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 0.7s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 1200px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; left: 600px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; left: 600px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; left: 600px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; left: 600px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left: 600px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 320px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 420px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 520px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 620px; left: 1500px;">
+	</div>
+<script>
+	let zombie = document.querySelectorAll('.zombies')
+	let pos = [1500, 1500, 1500, 1500, 1500]
+	let plant = document.querySelectorAll('.shooter')
+	let score = 0;
+	document.querySelector('.score').innerHTML = score
+	zombie[0].onclick = function(){
+		pos[0] -=150
+		zombie[0].style.left = pos[0]+'px';
+		if (pos[0]==600){
+			alert('ded')
+			plant[0].style.display = 'none'
+			score+=1
+			document.querySelector('.score').innerHTML = score
+			if (score == 5){
+				zombie[0].style.display = 'none'
+				zombie[1].style.display = 'none'
+				zombie[2].style.display = 'none'
+				zombie[3].style.display = 'none'
+				zombie[4].style.display = 'none'
+				alert('The end')
+			}
+			
+		}
+	}
+
+	zombie[1].onclick = function(){
+		pos[1] -=150
+		zombie[1].style.left = pos[1]+'px';
+		if (pos[1]<=600){
+			alert('ded')
+			plant[1].style.display = 'none'
+			score+=1
+			document.querySelector('.score').innerHTML = score
+			if (score == 5){
+				zombie[0].style.display = 'none'
+				zombie[1].style.display = 'none'
+				zombie[2].style.display = 'none'
+				zombie[3].style.display = 'none'
+				zombie[4].style.display = 'none'
+				alert('The end')
+			}
+			
+		}
+	}
+
+	zombie[2].onclick = function(){
+		pos[2] -=150
+		zombie[2].style.left = pos[2]+'px';
+		if (pos[2]<=600){
+			alert('ded')
+			plant[2].style.display = 'none'
+			score+=1
+			document.querySelector('.score').innerHTML = score
+			if (score == 5){
+				zombie[0].style.display = 'none'
+				zombie[1].style.display = 'none'
+				zombie[2].style.display = 'none'
+				zombie[3].style.display = 'none'
+				zombie[4].style.display = 'none'
+				alert('The end')
+			}
+			
+		}
+	}
+
+	zombie[3].onclick = function(){
+		pos[3] -=150
+		zombie[3].style.left = pos[3]+'px';
+		if (pos[3]<=600){
+			alert('ded')
+			plant[3].style.display = 'none'
+			score+=1
+			document.querySelector('.score').innerHTML = score
+			if (score == 5){
+				zombie[0].style.display = 'none'
+				zombie[1].style.display = 'none'
+				zombie[2].style.display = 'none'
+				zombie[3].style.display = 'none'
+				zombie[4].style.display = 'none'
+				alert('The end')
+			}
+			
+		}
+	}
+
+	zombie[4].onclick = function(){
+		pos[4] -=150
+		zombie[4].style.left = pos[4]+'px';
+		if (pos[4]<=600){
+			alert('ded')
+			plant[4].style.display = 'none'
+			score+=1
+			document.querySelector('.score').innerHTML = score
+			if (score == 5){
+				zombie[0].style.display = 'none'
+				zombie[1].style.display = 'none'
+				zombie[2].style.display = 'none'
+				zombie[3].style.display = 'none'
+				zombie[4].style.display = 'none'
+				alert('The end')
+			}
+		}
+	}
+</script>
+</body>
+</html>
